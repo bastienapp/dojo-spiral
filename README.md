@@ -1,7 +1,7 @@
 # Spirale
 
 Le but de ce kata est de dessiner une spirale dans le sens inverse des aiguilles d'une montre.
-Eans une grille comprenant N lignes et N colonnes (où N est un entier impair), en plaçant le premier point au centre, vous devez tourner à gauche à chaque fois que cela est possible, bien sûr sans sortir de la grille.
+Dans une grille comprenant N lignes et N colonnes (où N est un entier impair), en plaçant le premier point au centre, vous devez tourner à gauche à chaque fois que cela est possible, bien sûr sans sortir de la grille.
 
 Dans la grille a retourner, chaque trait sera représenté par un 1, et le reste par des 0.
 
