@@ -8,56 +8,56 @@ class Spiral {
 			int x = Math.round(size / 2);
 			int y = x;
 			String direction = "left";
-			int move = 2;
-			int count = 0;
+			int distance = 1;
+			int move = 0;
 			while (x >= 0 && x < size && y >= 0 && y < size) {
 				grid[y][x] = 1;
-				count++;
 				switch (direction) {
 					case "left":
-						if (count < move) {
+						if (move < distance) {
 							x--;
 						} else {
-							count = 1;
+							move = 0;
 							direction = "bottom";
-							move++;
+							distance++;
 							y++;
 						}
 						break;
 
 					case "bottom":
-						if (count < move) {
+						if (move < distance) {
 							y++;
 						} else {
-							count = 1;
+							move = 0;
 							direction = "right";
-							move++;
+							distance++;
 							x++;
 						}
 						break;
 
 					case "right":
-						if (count < move) {
+						if (move < distance) {
 							x++;
 						} else {
-							count = 1;
+							move = 0;
 							direction = "top";
-							move++;
+							distance++;
 							y--;
 						}
 						break;
 
 					case "top":
-						if (count < move) {
+						if (move < distance) {
 							y--;
 						} else {
-							count = 1;
+							move = 0;
 							direction = "left";
-							move++;
+							distance++;
 							x--;
 						}
 						break;
 				}
+				move++;
 			}
 		} else {
 			return null;
